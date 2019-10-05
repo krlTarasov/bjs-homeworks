@@ -233,7 +233,7 @@ class StudentLog {
     addGrade(grade, subject) {
         if (this[subject] === undefined) this[subject] = [];
 
-        if (grade >= 1 || grade <= 5 || grade % 1 == 0) {
+        if (grade >= 1 && grade <= 5 && grade % 1 == 0) {
             this[subject].push(grade);
              this.grades.push(grade);
         } else {
